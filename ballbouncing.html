@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Bouncing</title>
+    <style>
+        body{
+            background-color: rgb(253, 12, 161);
+        }
+        .container{
+            background-color:rgb(253, 178, 234);
+            height: 80vh;
+            width: 80vw;
+            display: flex;
+            align-items:center;
+            border: 5px solid ;
+            border-radius: 70px;
+            
+        }
+        .ball{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(6, 6, 6);
+            border-radius: 180px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: bounce 3s linear infinite,
+            bouncy 1s ease-out infinite alternate-reverse;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        @keyframes bounce {
+            from{
+                left: 0;
+            }
+            to{
+                left: 100%;
+            }
+        }
+        @keyframes bouncy{
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball">
+
+        </div>
+    </div>
+    
+</body>
+</html>
